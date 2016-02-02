@@ -15,6 +15,8 @@
 		0B2F27F21C4CD590003EC56E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F27F11C4CD590003EC56E /* MyProfileViewController.swift */; };
 		0B2F27F51C4DF46E003EC56E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F27F41C4DF46E003EC56E /* BackButton.swift */; };
 		0B2F27F81C4E037C003EC56E /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F27F71C4E037C003EC56E /* CALayer.swift */; };
+		0B7ECEED1C600CDC0022EEA4 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ECEEC1C600CDC0022EEA4 /* FriendListViewController.swift */; };
+		0B7ECEEF1C60106A0022EEA4 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ECEEE1C60106A0022EEA4 /* FriendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0B2F27F11C4CD590003EC56E /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		0B2F27F41C4DF46E003EC56E /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		0B2F27F71C4E037C003EC56E /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		0B7ECEEC1C600CDC0022EEA4 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		0B7ECEEE1C60106A0022EEA4 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				0B2F27F31C4DF45A003EC56E /* widgets */,
 				0B2F27DF1C4CAB2F003EC56E /* AppDelegate.swift */,
 				0B2F27E11C4CAB2F003EC56E /* MainMenuViewController.swift */,
+				0B7ECEEE1C60106A0022EEA4 /* FriendViewController.swift */,
+				0B7ECEEC1C600CDC0022EEA4 /* FriendListViewController.swift */,
 				0B2F27E31C4CAB2F003EC56E /* Main.storyboard */,
 				0B2F27E61C4CAB2F003EC56E /* Assets.xcassets */,
 				0B2F27E81C4CAB2F003EC56E /* LaunchScreen.storyboard */,
@@ -162,6 +168,8 @@
 			files = (
 				0B2F27F51C4DF46E003EC56E /* BackButton.swift in Sources */,
 				0B2F27F21C4CD590003EC56E /* MyProfileViewController.swift in Sources */,
+				0B7ECEED1C600CDC0022EEA4 /* FriendListViewController.swift in Sources */,
+				0B7ECEEF1C60106A0022EEA4 /* FriendViewController.swift in Sources */,
 				0B2F27E21C4CAB2F003EC56E /* MainMenuViewController.swift in Sources */,
 				0B2F27E01C4CAB2F003EC56E /* AppDelegate.swift in Sources */,
 				0B2F27F81C4E037C003EC56E /* CALayer.swift in Sources */,
@@ -314,6 +322,7 @@
 				0B2F27F01C4CAB2F003EC56E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
