@@ -19,10 +19,6 @@ class FriendListViewController:UITableViewController {
         
         //Setting back button to custom back button
         self.navigationItem.leftBarButtonItem = BackButton(navigationController: self.navigationController!);
-        
-        //Will align text in current activity text view correctly
-        self.automaticallyAdjustsScrollViewInsets = false;
-        
     }
     
     
@@ -42,22 +38,33 @@ class FriendListViewController:UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return "       Me"
+        return "      Me"
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 40;
+        //Making section header same height as a friend cell
+        return tableView.dequeueReusableCellWithIdentifier("FriendCell")!.frame.height
     }
-    
+   
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        //Setting me Icon
+        let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell")
+        //Adding me Icon
         let iconImg = UIImageView(frame: CGRectMake(5, 5, 30, 30))
         iconImg.image = UIImage(named: ("MeIcon"))
-        
-        let header = UITableViewHeaderFooterView()
+        let header = UITableViewHeaderFooterView(frame: CGRectMake(0, 0, tableView.bounds.size.width, cell!.frame.height))
         header.addSubview(iconImg)
+        
+        //Adding black border to bottom
+        let borderHeight:CGFloat = 2;
+        let borderFrame = CGRectMake(0,cell!.frame.height - borderHeight, header.frame.width, borderHeight)
+        
+        let border = UIView(frame: borderFrame)
+        border.backgroundColor = UIColor.blackColor()
+        
+        
+        header.addSubview(border);
+        
         return header
     }
     
@@ -76,7 +83,7 @@ class FriendListViewController:UITableViewController {
         
         //Setting chat icon if needed
         if(chatList[indexPath.row]){
-            let chatImg = UIImageView(frame: CGRectMake(cell.frame.width * 0.75, 10, 30, 25))
+            let chatImg = UIImageView(frame: CGRectMake(cell.frame.width - 70, 10, 30, 25))
             chatImg.image = UIImage(named: "ChatIcon")
             cell.addSubview(chatImg)
             
@@ -84,6 +91,11 @@ class FriendListViewController:UITableViewController {
         
         return cell
     }
+  
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       (navigationController?.visibleViewController as! FriendViewController).name =  friendList[indexPath.row]
+    }
+    
     
     
     

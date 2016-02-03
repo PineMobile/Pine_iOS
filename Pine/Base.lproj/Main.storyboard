@@ -236,7 +236,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="4jr-wz-nGu" kind="push" id="a0M-cP-OrA"/>
+                                    <segue destination="4jr-wz-nGu" kind="push" identifier="ShowFriend" id="a0M-cP-OrA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="1106" y="849"/>
         </scene>
-        <!--View Controller-->
+        <!--Friend View Controller-->
         <scene sceneID="vWm-nR-rvX">
             <objects>
-                <viewController id="4jr-wz-nGu" sceneMemberID="viewController">
+                <viewController id="4jr-wz-nGu" customClass="FriendViewController" customModule="Pine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YXL-0D-Gz5"/>
                         <viewControllerLayoutGuide type="bottom" id="trv-Pg-Zwi"/>
