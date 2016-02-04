@@ -35,6 +35,17 @@ class MainMenuViewController: UIViewController {
         
     }
     
+    @IBAction func friendsButtonClicked(){
+        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad){
+            //ipad pushing splitViewController
+           performSegueWithIdentifier("FriendsListSeguePad" , sender: self)
+        } else {
+            //iphone pushing normal friendListViewController
+            performSegueWithIdentifier("FriendsListSeguePhone" , sender: self)
+        }
+
+    }
+    
     
 }
 

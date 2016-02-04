@@ -33,14 +33,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="177"/>
                                         <state key="normal" backgroundImage="MyProfile"/>
                                         <connections>
-                                            <segue destination="XUN-k5-fUe" kind="push" id="AKs-zN-jb3"/>
+                                            <segue destination="XUN-k5-fUe" kind="push" identifier="" id="AKs-zN-jb3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="037-pn-V0G">
                                         <rect key="frame" x="160" y="0.0" width="160" height="177"/>
                                         <state key="normal" backgroundImage="Friends"/>
                                         <connections>
-                                            <segue destination="LVr-Dw-5Nw" kind="push" id="7x7-Rl-zy8"/>
+                                            <action selector="friendsButtonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAq-X4-z8s"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-Wi-l85">
@@ -100,6 +100,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V5f-pF-56P"/>
+                    <connections>
+                        <segue destination="LVr-Dw-5Nw" kind="push" identifier="FriendsListSeguePhone" id="XeK-Y6-0iL"/>
+                        <segue destination="6MB-wZ-V3S" kind="push" identifier="FriendsListSeguePad" id="Yqv-el-Z2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,12 +221,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2L-zi-5dW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="173"/>
+            <point key="canvasLocation" x="1140" y="128"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="woW-XK-EsW">
+            <objects>
+                <viewController title="Friends" id="6MB-wZ-V3S" customClass="FriendiPadViewController" customModule="Pine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CXj-a6-7us"/>
+                        <viewControllerLayoutGuide type="bottom" id="mRG-0Y-2nk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="de2-RW-a8n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMC-8z-AtA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <segue destination="vcV-qR-tth" kind="embed" identifier="SplitSegue" id="kD3-w8-Vjg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fMC-8z-AtA" firstAttribute="centerX" secondItem="de2-RW-a8n" secondAttribute="centerX" id="93P-G8-Vhd"/>
+                            <constraint firstItem="mRG-0Y-2nk" firstAttribute="top" secondItem="fMC-8z-AtA" secondAttribute="bottom" id="A7A-PL-bwa"/>
+                            <constraint firstItem="fMC-8z-AtA" firstAttribute="top" secondItem="CXj-a6-7us" secondAttribute="bottom" id="KM0-dI-tQR"/>
+                            <constraint firstItem="fMC-8z-AtA" firstAttribute="width" secondItem="de2-RW-a8n" secondAttribute="width" id="rf7-ZA-Vlw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friends" id="UUN-mN-5vC"/>
+                    <connections>
+                        <outlet property="splitViewContainer" destination="fMC-8z-AtA" id="dF9-Du-WdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DwU-ee-Fzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="815"/>
         </scene>
         <!--Friends-->
         <scene sceneID="Avm-VN-ALf">
             <objects>
-                <tableViewController id="LVr-Dw-5Nw" customClass="FriendListViewController" customModule="Pine" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FriendsListViewController" id="LVr-Dw-5Nw" customClass="FriendListViewController" customModule="Pine" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="u4h-Kf-njy">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,9 +275,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="4jr-wz-nGu" kind="push" identifier="ShowFriend" id="a0M-cP-OrA"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -247,15 +284,18 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Friends" id="cHd-oS-LXg"/>
+                    <connections>
+                        <segue destination="4jr-wz-nGu" kind="push" identifier="FriendSegue" id="iMC-hS-7yh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auz-L3-D3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="849"/>
+            <point key="canvasLocation" x="1631" y="442"/>
         </scene>
         <!--Friend View Controller-->
         <scene sceneID="vWm-nR-rvX">
             <objects>
-                <viewController id="4jr-wz-nGu" customClass="FriendViewController" customModule="Pine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FriendViewController" id="4jr-wz-nGu" customClass="FriendViewController" customModule="Pine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YXL-0D-Gz5"/>
                         <viewControllerLayoutGuide type="bottom" id="trv-Pg-Zwi"/>
@@ -269,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1g-BK-wPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="849"/>
+            <point key="canvasLocation" x="1732" y="1482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RRr-0b-u1y">
@@ -288,6 +328,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRb-gC-8nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148" y="295"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Nnf-xd-pvw">
+            <objects>
+                <viewController id="vcV-qR-tth" customClass="UISplitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qdy-0E-50z"/>
+                        <viewControllerLayoutGuide type="bottom" id="Noo-ZF-kwj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b2x-en-Cli">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAI-L2-7Vk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="1244"/>
         </scene>
     </scenes>
     <resources>

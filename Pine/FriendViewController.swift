@@ -20,8 +20,10 @@ class FriendViewController:UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Setting back button to custom back button
-        self.navigationItem.leftBarButtonItem = BackButton(navigationController: self.navigationController!);
+        //Setting back button to custom back button for phones
+         if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone){
+             self.navigationItem.leftBarButtonItem = BackButton(navigationController: self.navigationController!);
+        }
     }
     
     func updateViewsBasedOnName(){
