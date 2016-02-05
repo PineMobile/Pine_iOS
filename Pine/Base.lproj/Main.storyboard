@@ -303,9 +303,81 @@
                     <view key="view" contentMode="scaleToFill" id="MoM-Wa-MYW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JW-A7-hsW">
+                                <rect key="frame" x="0.0" y="405" width="320" height="163"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRG-Xz-1cV">
+                                        <rect key="frame" x="258" y="83" width="52" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="4P3-xh-nNx"/>
+                                            <constraint firstAttribute="width" constant="52" id="9gZ-rE-0RA"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="PineButton"/>
+                                        <connections>
+                                            <action selector="optionClicked:" destination="4jr-wz-nGu" eventType="touchUpInside" id="n38-ru-sT5"/>
+                                            <action selector="optionClicked:" destination="XUN-k5-fUe" eventType="touchUpInside" id="qL5-vY-B4h"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Looking for gym buddy." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo6-9j-A5J">
+                                        <rect key="frame" x="10" y="10" width="300" height="65"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qo6-9j-A5J" secondAttribute="trailing" constant="10" id="7FZ-Tv-f4a"/>
+                                    <constraint firstAttribute="trailing" secondItem="iRG-Xz-1cV" secondAttribute="trailing" constant="10" id="EUg-lp-35x"/>
+                                    <constraint firstItem="qo6-9j-A5J" firstAttribute="top" secondItem="0JW-A7-hsW" secondAttribute="top" constant="10" id="LDp-oz-xKL"/>
+                                    <constraint firstItem="qo6-9j-A5J" firstAttribute="leading" secondItem="0JW-A7-hsW" secondAttribute="leading" constant="10" id="LnK-Pb-j1n"/>
+                                    <constraint firstAttribute="bottom" secondItem="iRG-Xz-1cV" secondAttribute="bottom" constant="10" id="Pz5-S1-v2D"/>
+                                    <constraint firstItem="iRG-Xz-1cV" firstAttribute="top" secondItem="qo6-9j-A5J" secondAttribute="bottom" constant="8" id="qOh-vG-hnF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqX-op-sxj">
+                                <rect key="frame" x="0.0" y="64" width="320" height="341"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-p6-kao">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="341"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NEa-p6-kao" firstAttribute="leading" secondItem="gqX-op-sxj" secondAttribute="leading" id="7hw-fi-7N3"/>
+                                    <constraint firstItem="NEa-p6-kao" firstAttribute="top" secondItem="gqX-op-sxj" secondAttribute="top" id="EaP-1Y-tFC"/>
+                                    <constraint firstAttribute="bottom" secondItem="NEa-p6-kao" secondAttribute="bottom" id="NQN-8c-HGe"/>
+                                    <constraint firstAttribute="trailing" secondItem="NEa-p6-kao" secondAttribute="trailing" id="kLI-9j-L3k"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-qr-dhd">
+                                <rect key="frame" x="125" y="350" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="lQj-ej-crZ"/>
+                                    <constraint firstAttribute="height" constant="70" id="qXS-kB-4He"/>
+                                </constraints>
+                                <state key="normal" image="Ping"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0JW-A7-hsW" firstAttribute="centerX" secondItem="MoM-Wa-MYW" secondAttribute="centerX" id="1iX-E4-uyg"/>
+                            <constraint firstItem="0JW-A7-hsW" firstAttribute="top" secondItem="gqX-op-sxj" secondAttribute="bottom" id="2J5-MT-gWN"/>
+                            <constraint firstItem="7JX-qr-dhd" firstAttribute="centerX" secondItem="MoM-Wa-MYW" secondAttribute="centerX" id="E5c-e0-fxr"/>
+                            <constraint firstItem="gqX-op-sxj" firstAttribute="width" secondItem="MoM-Wa-MYW" secondAttribute="width" id="Ji7-Sj-5Cw"/>
+                            <constraint firstItem="gqX-op-sxj" firstAttribute="top" secondItem="YXL-0D-Gz5" secondAttribute="bottom" id="Q5l-od-tYl"/>
+                            <constraint firstItem="0JW-A7-hsW" firstAttribute="top" secondItem="7JX-qr-dhd" secondAttribute="bottom" constant="-15" id="Wx1-FD-7JE"/>
+                            <constraint firstItem="gqX-op-sxj" firstAttribute="height" secondItem="MoM-Wa-MYW" secondAttribute="height" multiplier="0.6" constant="1" id="cP8-9E-Sdf"/>
+                            <constraint firstItem="0JW-A7-hsW" firstAttribute="width" secondItem="MoM-Wa-MYW" secondAttribute="width" id="quU-tO-WVR"/>
+                            <constraint firstItem="gqX-op-sxj" firstAttribute="centerX" secondItem="MoM-Wa-MYW" secondAttribute="centerX" id="xCQ-Zt-X31"/>
+                            <constraint firstItem="0JW-A7-hsW" firstAttribute="bottom" secondItem="trv-Pg-Zwi" secondAttribute="top" id="zvf-Jm-uag"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cbD-O3-4Yf"/>
+                    <connections>
+                        <outlet property="imageView" destination="NEa-p6-kao" id="Iif-YW-dhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1g-BK-wPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,6 +426,7 @@
         <image name="Map" width="450" height="244"/>
         <image name="MyProfile" width="448" height="244"/>
         <image name="PineButton" width="88" height="131"/>
+        <image name="Ping" width="161" height="155"/>
         <image name="ProfilePic" width="900" height="600"/>
         <image name="Settings" width="450" height="244"/>
         <image name="Title" width="465" height="187"/>

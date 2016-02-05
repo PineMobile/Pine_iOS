@@ -10,7 +10,7 @@ import UIKit
 
 class FriendListViewController:UITableViewController {
     
-    var friendList: [String] = ["Mary", "Johnny", "Fred"]
+    var friendList: [String] = ["Rico", "Johnny", "Fred"]
     var chatList: [Bool] = [false, false, true]
     
     override func viewDidLoad() {
