@@ -15,6 +15,7 @@
 		0B2F27F21C4CD590003EC56E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F27F11C4CD590003EC56E /* MyProfileViewController.swift */; };
 		0B2F27F51C4DF46E003EC56E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F27F41C4DF46E003EC56E /* BackButton.swift */; };
 		0B2F27F81C4E037C003EC56E /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F27F71C4E037C003EC56E /* CALayer.swift */; };
+		0B6C68D51C7BE172000ED968 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C68D41C7BE172000ED968 /* SettingsViewController.swift */; };
 		0B7ECEED1C600CDC0022EEA4 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ECEEC1C600CDC0022EEA4 /* FriendListViewController.swift */; };
 		0B7ECEEF1C60106A0022EEA4 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ECEEE1C60106A0022EEA4 /* FriendViewController.swift */; };
 		0B7ECEF11C62CF0E0022EEA4 /* FriendiPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ECEF01C62CF0E0022EEA4 /* FriendiPadViewController.swift */; };
@@ -31,6 +32,7 @@
 		0B2F27F11C4CD590003EC56E /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		0B2F27F41C4DF46E003EC56E /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		0B2F27F71C4E037C003EC56E /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		0B6C68D41C7BE172000ED968 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0B7ECEEC1C600CDC0022EEA4 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		0B7ECEEE1C60106A0022EEA4 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		0B7ECEF01C62CF0E0022EEA4 /* FriendiPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendiPadViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				0B7ECEEE1C60106A0022EEA4 /* FriendViewController.swift */,
 				0B7ECEEC1C600CDC0022EEA4 /* FriendListViewController.swift */,
 				0B2F27E31C4CAB2F003EC56E /* Main.storyboard */,
+				0B6C68D41C7BE172000ED968 /* SettingsViewController.swift */,
 				0B2F27E61C4CAB2F003EC56E /* Assets.xcassets */,
 				0B2F27E81C4CAB2F003EC56E /* LaunchScreen.storyboard */,
 				0B2F27EB1C4CAB2F003EC56E /* Info.plist */,
@@ -177,6 +180,7 @@
 				0B2F27E21C4CAB2F003EC56E /* MainMenuViewController.swift in Sources */,
 				0B2F27E01C4CAB2F003EC56E /* AppDelegate.swift in Sources */,
 				0B2F27F81C4E037C003EC56E /* CALayer.swift in Sources */,
+				0B6C68D51C7BE172000ED968 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
