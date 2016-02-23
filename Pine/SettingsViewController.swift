@@ -43,18 +43,18 @@ class SettingsViewController:UITableViewController, UITextFieldDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("SettingsCell", forIndexPath: indexPath)
         switch indexPath.row {
         case searchIndex:
-            cell.textLabel?.text = "Search for people within            miles"
+            cell.textLabel?.text = "Search for people within  ____  miles"
             
             let milesView = UITextField();
             
-            milesView.layer.borderWidth = 1
+            milesView.layer.borderWidth = 2
             milesView.layer.cornerRadius = 5
             milesView.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
             milesView.layer.borderColor = UIColor(red:218/255.0, green:229/255.0, blue:241/255.0, alpha: 1.0).CGColor
             
             milesView.keyboardType = UIKeyboardType.NumberPad
             
-            milesView.frame = CGRectMake(cell.frame.width - 110, 10, 90, 25)
+            milesView.frame = CGRectMake(205, 7, 86, 30)
             
             milesView.delegate = self
             
