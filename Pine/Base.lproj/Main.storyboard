@@ -7,6 +7,36 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Map-->
+        <scene sceneID="ikt-9V-f5F">
+            <objects>
+                <viewController id="eng-Ts-awd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qnz-r5-hew"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Lp-4X-rfm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kxk-c8-sIy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="bxm-BF-fBV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Lp-4X-rfm" firstAttribute="top" secondItem="bxm-BF-fBV" secondAttribute="bottom" id="AnM-nV-Ykd"/>
+                            <constraint firstItem="bxm-BF-fBV" firstAttribute="centerX" secondItem="Kxk-c8-sIy" secondAttribute="centerX" id="cFK-7n-w20"/>
+                            <constraint firstItem="bxm-BF-fBV" firstAttribute="width" secondItem="Kxk-c8-sIy" secondAttribute="width" id="dVm-Xv-Pho"/>
+                            <constraint firstItem="bxm-BF-fBV" firstAttribute="top" secondItem="Qnz-r5-hew" secondAttribute="bottom" id="s8p-Jz-ULR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="dPu-wc-Ezx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ye0-wv-GdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="739"/>
+        </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -43,15 +73,18 @@
                                             <action selector="friendsButtonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAq-X4-z8s"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-Wi-l85">
-                                        <rect key="frame" x="0.0" y="177" width="160" height="176"/>
-                                        <state key="normal" backgroundImage="Map"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-km-xHp">
                                         <rect key="frame" x="160" y="177" width="160" height="176"/>
                                         <state key="normal" backgroundImage="Settings"/>
                                         <connections>
                                             <segue destination="7pd-z1-vey" kind="push" id="RuK-Jm-jDa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-Wi-l85">
+                                        <rect key="frame" x="0.0" y="177" width="160" height="176"/>
+                                        <state key="normal" backgroundImage="Map"/>
+                                        <connections>
+                                            <segue destination="eng-Ts-awd" kind="push" id="pXR-Iu-IWr"/>
                                         </connections>
                                     </button>
                                 </subviews>
